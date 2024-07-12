@@ -88,6 +88,19 @@
 
         }*/
 
+        let iconesSupprimer = document.querySelectorAll('.fa-solid');
+
+        iconesSupprimer.forEach(function(icone) {
+            icone.addEventListener('click', function() {
+                let tacheASupprimer = this.closest('.form-control');
+
+                if (tacheASupprimer) {
+                tacheASupprimer.remove();
+                }
+            });
+        });
+
+
 
     </script>
 </html>
