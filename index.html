@@ -16,8 +16,8 @@
         <h1>To do list</h1>
 
         <div class="ajoutertache">
-            <input type="text">
-            <button>Ajouter</button>
+            <input type="text" id="ajouterUneTache">
+            <button id="boutonAjouter">Ajouter</button>
         </div>
 
         <div class="liste-taches">
@@ -48,59 +48,13 @@
                 <input type="checkbox" name="checkbox"/> Mariage de Nico <i class="fa-solid fa-trash"></i>
           </label>
 
+          <template>
+                <label class="form-control">
+                    <input type="checkbox" name="checkbox"/> Tache <i class="fa-solid fa-trash"></i>
+               </label>
+          </template>
+
         </div>
     </body>
-
-    <script>
-        
-        //Personnaliser le 'Bonjour'
-        /*window.addEventListener ('load', function() {
-            let prenom = window.prompt("Quel est votre prénom?");
-
-            if(prenom) {
-            let prenomAfficher = document.getElementById('BonjourPrenom');
-            prenomAfficher.textContent = 'Bonjour ' + prenom + ' !';
-            }
-
-            else {
-                alert ('Vous n\'avez pas saisi de prénom.')
-            }
-        });*/
-
-        //Afficher la date du jour
-        const date = new Date();
-
-        let jour= date.getDate();
-        let mois = date.getMonth() + 1;
-        let année = date.getFullYear();
-
-        let dateActuelle = `${jour}` + '/' + `${mois}` + '/' + `${année}`;
-        console.log(dateActuelle);
-
-        let afficherDateActuelle = document.getElementById('dateActuelle');
-        afficherDateActuelle.textContent = 'Date : ' + dateActuelle;
-        
-        //
-
-        /*let boutonAjouter = document.querySelectorAll("button");
-
-        boutonAjouter.addEventListener ('onclick', function() {
-
-        }*/
-
-        let iconesSupprimer = document.querySelectorAll('.fa-solid');
-
-        iconesSupprimer.forEach(function(icone) {
-            icone.addEventListener('click', function() {
-                let tacheASupprimer = this.closest('.form-control');
-
-                if (tacheASupprimer) {
-                tacheASupprimer.remove();
-                }
-            });
-        });
-
-
-
-    </script>
+    <script src="index.js"></script>
 </html>
