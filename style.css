@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nom-date {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10px auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.ajoutertache {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ajoutertache input {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: 1px black solid;
+    border-right: none;
+    width: 50%;
+    padding: 12px 15px;
+    font-size: 14px;
+    height: fit-content;
+}
+
+.ajoutertache button {
+    border-radius: 8px;
+    border: none;
+    padding: 14px 18px;
+    font-size: 14px;
+    height: fit-content;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+}
+
+.liste-taches {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.liste-taches p {
+    width: fit-content;
+}
+
+.form-control {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1em 1fr 1em;
+    gap: 0.5em;
+}
+
+.form-control + .form-control {
+    margin-top: 1em; /*Espace entre les checkbox*/
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: black;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid black;
+    border-radius: 0.15em;
+    display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0); /*Rendre l'élément invisble*/
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: CanvasText;
+    transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+/*.liste-taches label {
+    background-color: rgba(128, 128, 128, 0.24);
+    border: none;
+    border-radius: 10px;
+    width: 70%;
+    padding: 10px 40px;
+    margin-bottom: 5px;
+}*/

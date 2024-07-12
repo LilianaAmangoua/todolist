@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/2a9a138293.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>To Do List</title>
+    </head>
+    <body>
+        <div class="nom-date">
+            <h2 id="BonjourPrenom">Bonjour</h2>
+            <h2 id="dateActuelle">Date: 11/01/2024</h2>
+        </div>
+        
+        <h1>To do list</h1>
+
+        <div class="ajoutertache">
+            <input type="text">
+            <button>Ajouter</button>
+        </div>
+
+        <div class="liste-taches">
+            <p>Date: 12/07/2024</p>
+          <label class="form-control">
+                <input type="checkbox" name="checkbox"/> Faire la vaisselle <i class="fa-solid fa-trash"></i>
+          </label>
+
+           <label class="form-control">
+                <input type="checkbox" name="checkbox"/> Poster le colis de Paul <i class="fa-solid fa-trash"></i>
+           </label>
+
+            <p>Date: 13/07/2024</p>
+          <label class="form-control">
+                <input type="checkbox" name="checkbox"/> Rendez-vous chez le dentiste<i class="fa-solid fa-trash"></i>
+          </label>
+
+          <label class="form-control">
+                <input type="checkbox" name="checkbox"/> Faire les courses <i class="fa-solid fa-trash"></i>
+          </label>
+
+           <label class="form-control">
+                <input type="checkbox" name="checkbox"/> Aller à la salle de sport <i class="fa-solid fa-trash"></i>
+           </label>
+
+            <p>Date: 15/07/2024</p>
+          <label class="form-control">
+                <input type="checkbox" name="checkbox"/> Mariage de Nico <i class="fa-solid fa-trash"></i>
+          </label>
+
+        </div>
+    </body>
+
+    <script>
+        
+        //Personnaliser le 'Bonjour'
+        /*window.addEventListener ('load', function() {
+            let prenom = window.prompt("Quel est votre prénom?");
+
+            if(prenom) {
+            let prenomAfficher = document.getElementById('BonjourPrenom');
+            prenomAfficher.textContent = 'Bonjour ' + prenom + ' !';
+            }
+
+            else {
+                alert ('Vous n\'avez pas saisi de prénom.')
+            }
+        });*/
+
+        //Afficher la date du jour
+        const date = new Date();
+
+        let jour= date.getDate();
+        let mois = date.getMonth() + 1;
+        let année = date.getFullYear();
+
+        let dateActuelle = `${jour}` + '/' + `${mois}` + '/' + `${année}`;
+        console.log(dateActuelle);
+
+        let afficherDateActuelle = document.getElementById('dateActuelle');
+        afficherDateActuelle.textContent = 'Date : ' + dateActuelle;
+        
+        //
+
+        /*let boutonAjouter = document.querySelectorAll("button");
+
+        boutonAjouter.addEventListener ('onclick', function() {
+
+        }*/
+
+
+    </script>
+</html>
