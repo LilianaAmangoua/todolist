@@ -1,16 +1,18 @@
 //Personnaliser le 'Bonjour'
-/*window.addEventListener ('load', function() {
+window.addEventListener ('load', function() {
     let prenom = window.prompt("Quel est votre prénom?");
 
     if(prenom) {
     let prenomAfficher = document.getElementById('BonjourPrenom');
     prenomAfficher.textContent = 'Bonjour ' + prenom + ' !';
+    prenomAfficher.style.color = '#e05a53';
+    prenomAfficher.style.borderBottom = '1px';
     }
 
     else {
         alert ('Vous n\'avez pas saisi de prénom.')
     }
-});*/
+});
 
 //Afficher la date du jour
 const date = new Date();
@@ -25,7 +27,7 @@ console.log(dateActuelle);
 let afficherDateActuelle = document.getElementById('dateActuelle');
 afficherDateActuelle.textContent = 'Date : ' + dateActuelle;
 
-//Supprimer une tache
+//Supprimer une tâche
 let iconesSupprimer = document.querySelectorAll('.fa-solid');
 
 iconesSupprimer.forEach(function(icone) {
@@ -38,7 +40,7 @@ iconesSupprimer.forEach(function(icone) {
     });
 });
 
-//Créer une nouvelle tache
+//Créer une nouvelle tâche
 
 let boutonAjouter = document.getElementById('boutonAjouter');
 
