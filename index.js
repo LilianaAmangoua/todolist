@@ -44,6 +44,7 @@ iconesSupprimer.forEach(function(icone) {
 
 let boutonAjouter = document.getElementById('boutonAjouter');
 
+
 boutonAjouter.addEventListener('click', function() {
     let ajouterUneTache = document.querySelector('#ajouterUneTache').value;
 
@@ -54,9 +55,10 @@ boutonAjouter.addEventListener('click', function() {
     else {
         let container = document.querySelector('.liste-taches');
         let nouvelleTache = document.createDocumentFragment();
-        
+
         const label = document.createElement('label');
         label.className = 'form-control';
+        label.style.backgroundColor = '#d4d9dc';
 
         const tacheSaisie = document.createTextNode(ajouterUneTache);
         
@@ -81,6 +83,32 @@ boutonAjouter.addEventListener('click', function() {
         nouvelleTache.appendChild(label);
         container.appendChild(nouvelleTache);
 
+        localStorage.setItem('nouvelleTache', 'container.appendChild(nouvelleTache)');
+        console.log(localStorage.setItem('nouvelleTache', 'container.appendChild(nouvelleTache)'));
+
         document.querySelector('#ajouterUneTache').value = '';
+
+
+        let prioritéTache = window.prompt('Quel est le niveau de priorité (Basse, Moyenne, Haute) ?');
+
+        if (prioritéTache === 'Basse' || prioritéTache === 'basse' ){
+            label.style.backgroundColor = 'rgb(184, 221, 184)';
+        }
+
+        else if (prioritéTache === 'Moyenne'|| prioritéTache === 'moyenne' ){
+            label.style.backgroundColor = 'rgb(236, 236, 175)'; 
+        }
+
+        else if (prioritéTache === 'Haute' || prioritéTache === 'haute'){
+            label.style.backgroundColor = 'rgb(241, 190, 190)';
+            nouvelleTache.prepend(label);
+            container.prepend(nouvelleTache);
+        }
+
+        else {
+            label.style.backgroundColor = '#d4d9dc';
+            alert ("Aucune priorité n'a été selectionée");
+        }
+        
     }
 });

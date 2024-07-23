@@ -61,7 +61,7 @@ h1 {
 }
 
 .liste-taches label {
-    background-color: #d4d9dc;
+    background-color: rgb(184, 221, 184);
     border: none;
     border-radius: 10px;
     width: 100%;
@@ -110,12 +110,12 @@ input[type="checkbox"]::before {
     background-color: #e05a53;
     transform-origin: bottom left;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-  
 }
 
 input[type="checkbox"]:checked::before {
     transform: scale(1);
 }
+
 
 @media only screen and (max-width: 780px) {
 
